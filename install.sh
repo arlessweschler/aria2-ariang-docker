@@ -2,10 +2,10 @@
 
 echo "[INFO] Set variables for $(arch)"
 
-caddy_version=2.7.5
-filebrowser_version=v2.26.0
-rclone_version=v1.64.2
-ariang_version=1.3.6
+caddy_version=2.9.1
+filebrowser_version=v2.32.0
+rclone_version=v1.69.1
+ariang_version=1.3.10
 
 case "$(arch)" in
 
@@ -42,6 +42,7 @@ groupadd junv \
   && tar -zxf ${caddy_file} \
   && mv caddy /usr/local/bin/ \
   && rm -rf ${caddy_file} \
+  && wget -P /app -N https://raw.githubusercontent.com/glowinthedark/caddy-file-server-browse-extension/39e997c91539d0f04fcce53a3cb6605b2ae9e50c/browse.html \
   && platform=linux-amd64 \
   && wget -N https://github.com/filebrowser/filebrowser/releases/download/${filebrowser_version}/${filebrowser_file} \
   && tar -zxf ${filebrowser_file} \

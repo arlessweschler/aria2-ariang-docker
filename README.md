@@ -72,6 +72,7 @@ File Browser
 ```
 
 * Aria2: <http://yourip:8000>
+* Caddy File Server(Read Only) <http://yourip:8000/ro>
 * FileManger: <http://yourip:8000/files>
 * Rclone: <http://yourip:8000/rclone>
 * Please use `admin`/`admin` as username and password to login `Filebrowser` for the first time. And use `user`/`password` to login `Rclone` if you don't update `ARIA2_USER` and `ARIA2_PWD`
@@ -124,7 +125,8 @@ Then simply run `docker-compose up -d`, that's it!
 | ENV | Description|
 |:---|:---|
 | `ENABLE_AUTH` | Whether to enable Basic auth |
-| `ENABLE_RCLONE` | Whether to disable Rclone, if you running this container offline or do not have stable connection to Github, please set to `false`
+| `ENABLE_RCLONE` | Whether to disable Rclone, if you running this container offline or do not have stable connection to Github, please set to `false` |
+| `ENABLE_FILEBROWSER` | Whether to disable Filebrowser, set it to `false` to disable it, by default it's enabled |
 | `ARIA2_USER` | Basic Auth username, Rclone GUI uses it as well. |
 | `ARIA2_PWD` | Basic Auth password, Rclone GUI uses it as well. |
 | `ARIA2_EXTERNAL_PORT` | The Aria2 port which exposed to public to access to |
